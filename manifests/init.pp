@@ -82,7 +82,6 @@ class hatf2(
   #should the service be managed
 ) inherits hatf2::params {
 
-  validate_string()
 
   case $::osfamily {
 
