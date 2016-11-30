@@ -1,6 +1,6 @@
 {
   "name": "danielburrell-hatf2",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "author": "danielburrell",
   "summary": "Manages HatF2 on linux machines",
   "license": "MIT",
@@ -10,7 +10,8 @@
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
 	{"name":"puppetlabs/apt","version_requirement":">=1.8.0 <3.0.0"},
-    {"name":"tylerwalts-jdk_oracle","version_requirement":">=1.5.0"}
+    {"name":"tylerwalts-jdk_oracle","version_requirement":">=1.5.0"},
+    {"name":"danielburrell-ppa","version_requirement":">=0.1.0"}
   ]
 }
 

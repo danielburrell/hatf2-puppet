@@ -86,8 +86,10 @@ class hatf2(
   case $::osfamily {
 
     'Debian': {
-      class { '::hatf2::repo::apt' :
-       repo_key  => $repo_key
+      if ! defined(Class['::ppa']) {
+        class { '::ppa' :
+         repo_key  => $repo_key
+        }
       }
       $package_require = Class['apt::update']
     }
