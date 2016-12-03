@@ -88,7 +88,8 @@ class hatf2(
     'Debian': {
       if ! defined(Class['::ppa']) {
         class { '::ppa' :
-         repo_key  => $repo_key
+         repo_key  => $repo_key,
+         allow_unsigned => true
         }
       }
       $package_require = Class['apt::update']
