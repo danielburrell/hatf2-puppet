@@ -77,6 +77,8 @@ class hatf2(
   #github key for oauth
   $github_clientsecret,
   $github_clientid,
+  $raw_domain         = $hatf2::params::raw_domain,
+  $manage_ssl_proxy   = $hatf2::params::manage_ssl_proxy,
   $domain             = $hatf2::params::domain,
   $repos_ensure               = $hatf2::params::repos_ensure,
   #should the service be managed
@@ -89,7 +91,7 @@ class hatf2(
       if ! defined(Class['::ppa']) {
         class { '::ppa' :
          repo_key  => $repo_key,
-         allow_unsigned => true
+         allow_unsigned => false
         }
       }
       $package_require = Class['apt::update']

@@ -16,6 +16,7 @@ class hatf2::params {
 
   #install
 
+  $manage_ssl_proxy = true
   $repos_ensure = true
   $repo_key = undef
   #mongo db to connect to
@@ -32,6 +33,7 @@ class hatf2::params {
   $github_clientsecret = undef
   $github_clientid = undef
   $domain = '.hatf2.com'
+  $raw_domain = 'hatf2.com'
   #should the service be managed
   $service_manage = true
   $service_ensure = 'running'
